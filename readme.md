@@ -15,6 +15,7 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 ---
 
 ## 🧱 Projektstruktur
+```
 📁 pdf_downloader/
 │
 ├── main.py # CLI entry point
@@ -22,6 +23,7 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 ├── pdf_downloader.py # Downloader PDF’er fra URL’er
 ├── file_saver.py # Gemmer filer i output-mappe
 └── logger.py # (Valgfrit) Logning af hændelser
+```
 
 ---
 
