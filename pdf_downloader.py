@@ -10,7 +10,7 @@ class PdfDownloader:
         self.logger = logger
 
     ## Funktion der henter ned via requests gennem URL
-    def download(self, url: str) -> bytes:
+    def download(self, url: str):
         self.logger.log_info(f"Forsøger at downloade fra {url}")
 
         try:
