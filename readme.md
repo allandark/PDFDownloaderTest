@@ -44,6 +44,7 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 ```
    pip install -r requirements.txt
 ```
+---
 
 ## 🧩 Brug
 
@@ -51,6 +52,7 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 ```
    python main.py -i StiTil/DinMappe -uc KolonnenMedURLer -nc KolonnenMedNavnene -o MappenDu/VilGemmeI
 ```
+---
 
 ### Argumenter
 
