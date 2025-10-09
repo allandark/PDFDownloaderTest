@@ -45,19 +45,14 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
    pip install -r requirements.txt
 ```
 
-🧩 Brug
+## 🧩 Brug
 
-Kør programmet fra kommandolinjen:
+### Kør programmet fra kommandolinjen:
 ```
    python main.py -i StiTil/DinMappe -uc KolonnenMedURLer -nc KolonnenMedNavnene -o MappenDu/VilGemmeI
 ```
 
-Argumenter
-Flag	Beskrivelse	Eksempel
---input / -i	Sti til Excel-filen	data/input/Test_ark.xlsx
---url-column / -u	Navn på kolonnen med URL’er	Pdf_URL
---name-column / -n	Navn på kolonnen med filnavne	Pdf_Name
---output / -o	Outputmappe, hvor PDF’er gemmes	data/output
+### Argumenter
 
 | Flag | Beskrivelse | Eksempel |
 | --- | --- | --- |
