@@ -18,11 +18,11 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 ```
 📁 pdf_downloader/
 │
-├── main.py # CLI entry point
-├── excel_reader.py # Læser data fra Excel-ark
-├── pdf_downloader.py # Downloader PDF’er fra URL’er
-├── file_saver.py # Gemmer filer i output-mappe
-└── logger.py # (Valgfrit) Logning af hændelser
+├── main.py            # CLI entry point
+├── excel_reader.py    # Læser data fra Excel-ark
+├── pdf_downloader.py  # Downloader PDF’er fra URL’er
+├── file_saver.py      # Gemmer filer i output-mappe
+└── logger.py          # (Valgfrit) Logning af hændelser
 ```
 
 ---
@@ -31,8 +31,7 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 
 1. Klon projektet:
 ```
-   bash
-   git clone https://github.com/<brugernavn>/pdf-downloader.git
+   git clone https://github.com/SaneStreet/pdf-downloader.git
    cd pdf-downloader 
 ```
 2. Opret et virtuelt miljø (valgfrit men anbefalet):
@@ -59,3 +58,10 @@ Flag	Beskrivelse	Eksempel
 --url-column / -u	Navn på kolonnen med URL’er	Pdf_URL
 --name-column / -n	Navn på kolonnen med filnavne	Pdf_Name
 --output / -o	Outputmappe, hvor PDF’er gemmes	data/output
+
+| Flag | Beskrivelse | Eksempel |
+| --- | --- | --- |
+| `-i / --input` | Sti til Excel-filen | `data/input/Data.xlsx` |
+| `-uc / --urlcolumn` | Navn på kolonnen med URL’er | `-uc pdf_URL` |
+| `-nc / --namecolumn` | Navn på kolonnen med filnavne | `-nc PdfNr` |
+| `-o / --output` | Outputmappe, hvor PDF’er gemmes | `-o ./Downloads` |
