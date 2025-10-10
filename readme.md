@@ -69,3 +69,4 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 * Progress bar der viser download-tid
 * Mulighed for at hente fra sekundære kolonner
 * Potentiel GUI projekt
+* Logføring til validering af downloads og evt. fejlbeskeder (404, 403, nan, etc)
