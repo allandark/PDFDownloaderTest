@@ -1,4 +1,4 @@
-# 🧩 PDF Downloader
+# 📜 PDF Downloader
 
 Et simpelt, modulopbygget Python-program der kan downloade PDF-filer fra URL’er gemt i et Excel-ark.  
 Programmet er designet med **separation of concerns**, **SOLID-principper** og **modulær arkitektur** for at gøre det nemt at udvide og vedligeholde.
@@ -7,10 +7,11 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 
 ## 🚀 Funktioner
 
-- Læser URL’er og filnavne fra et Excel-ark (.xlsx)
+- Læser URL’er fra kolonner i et Excel-ark (.xlsx)
 - Downloader PDF’er fra de angivne URL’er
+- Navngivning efter ønsket kolonnenavn
 - Gemmer dem i en valgfri mappe
-- Fejlhåndtering ved manglende filer, ugyldige URL’er og kolonnenavne
+- Fejlhåndtering ved manglende kolonnenavne og ugyldige URL’er
 
 ---
 
@@ -62,3 +63,9 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 | `-uc / --urlcolumn` | Navn på kolonnen med URL’er | `-uc pdf_URL` |
 | `-nc / --namecolumn` | Navn på kolonnen med filnavne | `-nc PdfNr` |
 | `-o / --output` | Outputmappe, hvor PDF’er gemmes | `-o ./Downloads` |
+
+## 💡 Udvidelser i vente
+* Multithreading til asynkront downloading
+* Progress bar der viser download-tid
+* Mulighed for at hente fra sekundære kolonner
+* Potentiel GUI projekt
