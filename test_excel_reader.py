@@ -4,9 +4,9 @@ def main():
     reader = ExcelReader()
 
     try:
-        urls = reader.read_urls("data/input/Test_ark.xlsx", "Pdf_URL")
-        print("ExcelReader virker. Læste rækker:", len(urls))
-        print("Første 3:", urls[:3])
+        data = reader.data("data/input/Test_ark.xlsx", "Pdf_URL", "BRnum")
+        print("ExcelReader virker. Læste rækker:", len(data))
+        print("Første 3:", data[:3])
     except Exception as e:
         print("Fejl i ExcelReader:", e)
     
