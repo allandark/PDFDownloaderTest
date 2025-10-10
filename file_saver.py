@@ -34,6 +34,6 @@ class FileSaver:
         except Exception as e:
             raise IOError(f"Kunne ikke gemme filen '{path}': {e}")
 
-        self.logger.log_info(f"Fil gemt: {path}")
+        self.logger.log_info(f"✅ Fil gemt: {path}")
         # returnere path
         return path

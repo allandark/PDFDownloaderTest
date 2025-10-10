@@ -23,14 +23,14 @@ class PdfDownloader:
 
     ## Funktion der henter ned via requests gennem URL
     def download(self, url: str):
-        self.logger.log_info(f"↘️ Forsøger at downloade fra {url}")
+        self.logger.log_info(f"↘️  Forsøger at downloade fra {url}")
 
         # try-except om der er response fra URL-server
         try:
             response = req.get(url, timeout=10)
             response.raise_for_status()
         except req.RequestException as re:
-            raise RuntimeError(f"Fejl ved download af {url}:\n {re}")
+            raise RuntimeError(f"Fejl ved download af {url}:\n\t {re}")
         
         # Tjek om response headers er korrekt type (application/pdf)
         if not response.headers.get("Content-Type", "").startswith("application/pdf"):

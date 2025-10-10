@@ -45,8 +45,8 @@ class MainController:
             try:
                 data = self.pdf_downloader.download(url)
                 file_name = f"{filename}.pdf"
-                saved_path = self.file_saver.save(data, output_dir, file_name)
-                self.logger.log_info(f"✅ Gemte: {saved_path}")
+                self.file_saver.save(data, output_dir, file_name)
+                #self.logger.log_info(f"✅ Gemte: {saved_path}")
             except Exception as e:
                 self.logger.log_error(f"❌ Kunne ikke hentes: {e}")
 
