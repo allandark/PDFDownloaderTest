@@ -1,4 +1,18 @@
-## Logger alle de nødvendige indikatorer for succesfulde og fejlede downloads
+"""
+class LoggerService
+En service der deler informationer i konsollen
+
+Args:
+    message (str): Beskeden der skal deles
+
+Functions:
+    log_info(message):  Funktion der skriver en information i konsollen
+    log_error(message): Funktion der skriver en fejlbesked i konsollen
+
+Returns:
+    Printer beskeder i konsollen ved kald
+"""
+
 # Import tidsstempler til log beskeder
 from datetime import datetime
 

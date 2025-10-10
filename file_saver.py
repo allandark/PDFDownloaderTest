@@ -1,4 +1,15 @@
-## Til at gemme PDF-filer på disk
+"""
+class FileSaver
+Danner og gemmer filer, hvor bytes fra PdfDownloader bliver lagt i filerne
+
+Args:
+    file_data (bytes):  Selve fil data i bytes-format
+    output_dir (str):   Stien hvor filerne skal gemmes til
+    filename (str):     Navnet på filen
+
+Returns:
+    path: Stien hvor det hele gemmes
+"""
 
 ## Operativ system egenskaber importeres
 import os
