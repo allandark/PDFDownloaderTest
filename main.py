@@ -54,7 +54,7 @@ class MainController:
 def main():
     # Parser så programmet kan køres med argumenter gennem CLI (konsolbaseret)
     parser = argparse.ArgumentParser(
-        description="PDF Downloader - Læser URL'er fra Excel og hentder PDF automatisk."
+        description="PDF Downloader - Læser URL'er fra Excel og henter PDF automatisk."
     )
     # Tilføjer 'input' argument
     parser.add_argument(
