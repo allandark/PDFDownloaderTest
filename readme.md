@@ -66,7 +66,8 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 
 ## 💡 Udvidelser i vente
 * Multithreading til asynkront downloading
-* Progress bar der viser download-tid
-* Mulighed for at hente fra sekundære kolonner
+* Progress bar der viser download estimeret tid
+* Mulighed for at hente fra sekundære kolonner, hvis primære kolonner har ugyldige URL
 * Potentiel GUI projekt
 * Logføring til validering af downloads og evt. fejlbeskeder (404, 403, nan, etc)
+* Mulighed for at bruger kan vælge navngivning på PDF-filerne (f.eks. "pdf_01", "file_pdf_05", etc)
