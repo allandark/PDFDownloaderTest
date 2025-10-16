@@ -9,8 +9,8 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh '''pytest tests/unit --junitxml="tests/results/unittest_report.xml"
-pytest tests/integration --junitxml="tests/results/integrationtest_report.xml" '''
+        sh '''pytest tests/unit --junitxml="tests/results/unittest_report.xml"'''
+        sh '''pytest tests/integration --junitxml="tests/results/integrationtest_report.xml"'''
       }
     }
 
