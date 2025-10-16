@@ -11,9 +11,12 @@ pipeline {
 
       steps {
           sh 'python --version'
-          sh 'ls'
-          sh 'python -m pip install --upgrade pip --user pip'
-          sh 'python -m pip install -r requirements.txt'
+          sh '''
+          python -m venv venv
+          . venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          '''
       }
 
     }
