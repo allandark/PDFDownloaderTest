@@ -10,8 +10,8 @@ pipeline {
       steps {
         echo 'Installing dependencies..'
         sh '''
-        sudo apt update
-        sudo apt install python3 -y
+        apt update
+        apt install -y python3 python3-pip
         pip install -r requirements.txt
         '''
       }
