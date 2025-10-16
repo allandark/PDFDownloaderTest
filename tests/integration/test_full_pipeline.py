@@ -8,6 +8,7 @@ from PDFDownloader.pdf_downloader import PdfDownloader
 from PDFDownloader.file_saver import FileSaver
 from PDFDownloader.excel_reader import ExcelReader
 from PDFDownloader.logger import LoggerService
+from PDFDownloader.main import MainController
 
 
 @pytest.fixture
@@ -43,7 +44,7 @@ def mock_sample_data(sample_file_path):
     yield data
 
 
-def test_full_pipeline(
+def test_full_pipeline_valid_file_url(
     tmp_path, sample_file_path,
     saver, reader, downloader, 
     mock_data_tuple, mock_sample_data ):
@@ -63,4 +64,31 @@ def test_full_pipeline(
     assert result_path.exists()
     assert zlib.crc32(result_path.read_bytes()) == zlib.crc32(mock_sample_data)         
 
+
+def test_full_pipeline_invalid_url(
+    tmp_path, sample_file_path,
+    saver, reader, downloader, 
+    mock_data_tuple, mock_sample_data ):
+    
+    read_result = reader.read_data(
+        os.path.join( sample_file_path, "sample_excel_valid.xlsx"), 
+        "Pdf_URL", "BRnum")
+    assert read_result == mock_data_tuple
+    invalid_url = "http://arpeissig.at/wp-content/uploads/2016/02/D7_NHB_ARP_Final_2.pdf"
+    
+    with pytest.raises(RuntimeError):
+        download_result = downloader.download(invalid_url)
+          
+
+
+def test_main_controller_run_valid(
+    tmp_path, sample_file_path,
+    saver, reader, downloader, 
+    mock_data_tuple, mock_sample_data ):
+    controller = MainController(reader, downloader, saver, LoggerService())
+    try:
+        controller.run(os.path.join( sample_file_path, "sample_excel_valid.xlsx"), "Pdf_URL", "BRnum", tmp_path)  
+    except Exception as e:
+        pytest.fail(f"Unexcepted exception raised: {e}")
+    
 

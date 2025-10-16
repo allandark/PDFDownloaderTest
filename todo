@@ -1,1 +1,23 @@
-jenkins pipeline
+[] integration test:
+    [] Find de sidste
+    []
+
+[] jenkins pipeline
+    [] Install deps
+    [] Pytest
+    [] Artifacts
+    [] Run on commit
+
+[] Rapport
+    [] Fejl/bugs
+    [] Resume - resultat kommentar
+    [] Testet funktionalitet - kommentar
+    [] Afrunding
+
+[] Præsentation
+    [] Agenda
+    [] Projekt struktur/pytest/
+    [] Test Cases
+    [] Git/Jenkins
+    [] 
+    [] Transitions

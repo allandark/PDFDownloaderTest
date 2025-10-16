@@ -1,16 +1,7 @@
 pipeline {
   
-    agent {
-        docker {
-            image 'python:3.10'
-        }
-    }
+    agent any
 
-
-  
-  // environment {
-  //     GITHUB_CREDENTIALS = credentials('github-personal-token')
-  // }
 
   stages {
   
@@ -19,6 +10,8 @@ pipeline {
       steps {
         echo 'Installing dependencies..'
         sh '''
+        sudo apt update
+        sudo apt install python3 -y
         pip install -r requirements.txt
         '''
       }
