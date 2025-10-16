@@ -12,7 +12,7 @@ pipeline {
       steps {
           sh 'python --version'
           sh 'ls'
-          sh 'python -m pip install --upgrade pip'
+          sh 'python -m pip install --upgrade pip --user pip'
           sh 'python -m pip install -r requirements.txt'
       }
 
