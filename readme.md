@@ -50,7 +50,7 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 ## 🧩 Brug
 
 ### Kør programmet fra kommandolinjen:
-```
+```bash
    python main.py -i StiTil/DinMappe -uc KolonnenMedURLer -nc KolonnenMedNavnene -o MappenDu/VilGemmeI
 ```
 ---
@@ -71,3 +71,14 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 * Potentiel GUI projekt
 * Logføring til validering af downloads og evt. fejlbeskeder (404, 403, nan, etc)
 * Mulighed for at bruger kan vælge navngivning på PDF-filerne (f.eks. "pdf_01", "file_pdf_05", etc)
+
+## Tests
+
+**Kør unittests og generer en rapport**
+```
+pytest tests/unit --junitxml="tests/results/unittest_report.xml"
+```
+**Kør integrationtests og generer en rapport**
+```
+pytest tests/integration --junitxml="tests/results/integrationtest_report.xml" 
+```

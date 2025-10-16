@@ -1,13 +1,20 @@
-[build-system]
-requires = ["hatchling >= 1.26"]
-build-backend = "hatchling.build"
-
 [project]
 name = "PDFDownloader"
-dynamic = ["version"]
+version = "0.1.0"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src/PDFDownloader"]
+
 
 [tool.pytest.ini_options]
-addopts = [
-    "--import-mode=importlib",
+addopts = "--import-mode=importlib"
+pythonpath = ["src"]
+testpaths = [
+    "tests/unit",
+    "tests/integration"
 ]
-pythonpath = ["src",]
+
