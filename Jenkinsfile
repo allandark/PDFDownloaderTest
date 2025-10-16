@@ -9,11 +9,14 @@ pipeline {
   stages {
   
 
-    stage('Build') {
+    stage('Install Dependencies') {
       steps {
-        echo 'Building..'
-        // echo "Using GitHub username: ${env.GITHUB_CREDENTIALS_USR}"
-        // sh 'pip install -r requirements.txt'
+        echo 'Installing dependencies..'
+        sh '''
+        python3 -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+        '''
       }
     }
 
