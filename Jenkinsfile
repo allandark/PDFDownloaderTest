@@ -6,6 +6,11 @@ pipeline {
              args '-u root'
         }
     }
+    
+    environment {
+        PYTHONPATH = 'src'
+    }
+
 
   stages {
     stage('Install Dependencies') {
