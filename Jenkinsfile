@@ -17,7 +17,6 @@ pipeline {
           pip install -r requirements.txt
           '''
       }
-
     }
 
     stage('Test') {
@@ -27,7 +26,12 @@ pipeline {
         sh '''pytest tests/integration --junitxml="tests/results/integrationtest_report.xml"'''
         junit 'tests/results/*.xml'
       }
+    }   
+     
+    post {
+      always {
+        archiveArtifacts artifacts: 'tests/results/*.xml', fingerprint: true
+      }
     }
-
   }
 }
