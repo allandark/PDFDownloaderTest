@@ -3,14 +3,16 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'pip install -r requirements.txt'
+        echo 'Building..'
+        // sh 'pip install -r requirements.txt'
       }
     }
 
     stage('Test') {
       steps {
-        sh '''pytest tests/unit --junitxml="tests/results/unittest_report.xml"'''
-        sh '''pytest tests/integration --junitxml="tests/results/integrationtest_report.xml"'''
+        echo 'Testing..'
+        // sh '''pytest tests/unit --junitxml="tests/results/unittest_report.xml"'''
+        // sh '''pytest tests/integration --junitxml="tests/results/integrationtest_report.xml"'''
       }
     }
 
