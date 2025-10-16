@@ -1,5 +1,11 @@
 pipeline {
-  agent any
+  
+    agent {
+        docker {
+            image 'python:3.10'
+        }
+    }
+
 
   
   // environment {
@@ -13,8 +19,6 @@ pipeline {
       steps {
         echo 'Installing dependencies..'
         sh '''
-        python -m venv venv
-        source venv/bin/activate
         pip install -r requirements.txt
         '''
       }
