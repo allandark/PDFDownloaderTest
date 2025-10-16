@@ -2,7 +2,7 @@ pipeline {
   
     agent {
         docker {
-            image 'python:3.10'
+            image 'python:3.13.7'
         }
     }
 
@@ -12,9 +12,6 @@ pipeline {
       steps {
           sh 'python --version'
           sh '''
-          python -m venv venv
-          . venv/bin/activate
-          pip install --upgrade pip
           pip install -r requirements.txt
           '''
       }
