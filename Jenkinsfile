@@ -11,6 +11,7 @@ pipeline {
     stage('Install Dependencies') {
 
       steps {
+          echo '--- Installing dependencies ---'
           sh 'python --version'
           sh '''
           pip install -r requirements.txt
@@ -21,9 +22,10 @@ pipeline {
 
     stage('Test') {
       steps {
-        echo 'Testing..'
-        // sh '''pytest tests/unit --junitxml="tests/results/unittest_report.xml"'''
-        // sh '''pytest tests/integration --junitxml="tests/results/integrationtest_report.xml"'''
+        echo '--- Testing and generating reports ---'
+        sh '''pytest tests/unit --junitxml="tests/results/unittest_report.xml"'''
+        sh '''pytest tests/integration --junitxml="tests/results/integrationtest_report.xml"'''
+        junit 'tests/results/*.xml'
       }
     }
 
