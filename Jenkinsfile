@@ -27,11 +27,10 @@ pipeline {
         junit 'tests/results/*.xml'
       }
     }   
-     
-    post {
-      always {
-        archiveArtifacts artifacts: 'tests/results/*.xml', fingerprint: true
-      }
+  }
+  post {
+    always {
+      archiveArtifacts artifacts: 'tests/results/*.xml', fingerprint: true
     }
   }
 }
