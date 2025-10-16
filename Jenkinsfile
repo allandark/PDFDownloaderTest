@@ -33,9 +33,15 @@ pipeline {
       }
     }   
   }
+
   post {
     always {
+      echo 'Archiving artifacts'
       archiveArtifacts artifacts: 'tests/results/*.xml', fingerprint: true
+      
+      echo 'Cleaning up test cache...'
+      sh 'rm -rf .pytest_cache'
+
     }
   }
 }
