@@ -18,7 +18,7 @@ def test_save_valid_path(tmp_path, mock_file_saver):
         with patch("os.makedirs"):            
             result = mock_file_saver.save(b'data', tmp_path, 'filename.pdf')
             file_path = tmp_path / "filename.pdf"
-            assert result == file_path
+            assert result == str(file_path)
 
 # DEMO: show
 def test_save_makedirs_permission_denied(tmp_path, mock_file_saver):
