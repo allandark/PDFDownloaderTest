@@ -2,6 +2,7 @@ import pytest
 from unittest.mock import patch, mock_open
 
 from os import makedirs
+from pathlib import Path
 
 from PDFDownloader.file_saver import FileSaver
 from PDFDownloader.logger import LoggerService
@@ -16,7 +17,7 @@ def test_save_valid_path(tmp_path, mock_file_saver):
     with patch("builtins.open"):
         with patch("os.makedirs"):            
             result = mock_file_saver.save(b'data', tmp_path, 'filename.pdf')
-            file_path = f"{str(tmp_path)}\\filename.pdf"
+            file_path = tmp_path / "filename.pdf"
             assert result == file_path
 
 # DEMO: show
