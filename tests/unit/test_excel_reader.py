@@ -48,7 +48,7 @@ def test_read_data_file_not_found(tmp_path, mock_reader):
         with pytest.raises(FileNotFoundError):
             mock_reader.read_data(f"{tmp_path}/missing.xlsx", "Pdf_URL", "BRnum")
 
-@pytest.mark.skip(reason="Pipeline test")
+# @pytest.mark.skip(reason="Pipeline test")
 def test_read_data_invalid_url(tmp_path, mock_reader):    
     with patch("pandas.read_excel", return_value=
         pd.DataFrame({"Pdf_URL": ["invalidurl"], "BRnum": ['123']} )):        
