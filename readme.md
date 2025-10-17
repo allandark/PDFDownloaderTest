@@ -64,16 +64,10 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 | `-nc / --namecolumn` | Navn på kolonnen med filnavne | `-nc PdfNr` |
 | `-o / --output` | Outputmappe, hvor PDF’er gemmes | `-o ./Downloads` |
 
-## 💡 Udvidelser i vente
-* Multithreading til asynkront downloading
-* Progress bar der viser download estimeret tid
-* Mulighed for at hente fra sekundære kolonner, hvis primære kolonner har ugyldige URL
-* Potentiel GUI projekt
-* Logføring til validering af downloads og evt. fejlbeskeder (404, 403, nan, etc)
-* Mulighed for at bruger kan vælge navngivning på PDF-filerne (f.eks. "pdf_01", "file_pdf_05", etc)
 
-## Tests
-
+## ✅ Tests
+Test miljøet gør brug af Pytest pakken. Dependencies er tilføjet til requirements.txt og følgende kommandoer kræver derfor ikke mere setup.
+Der er oprettet en `Jenkinsfile` to at køre testene automatisk i en pipeline.
 **Kør unittests og generer en rapport**
 ```
 pytest tests/unit --junitxml="tests/results/unittest_report.xml"
@@ -82,3 +76,14 @@ pytest tests/unit --junitxml="tests/results/unittest_report.xml"
 ```
 pytest tests/integration --junitxml="tests/results/integrationtest_report.xml" 
 ```
+
+
+## 💡 Udvidelser i vente
+* Multithreading til asynkront downloading
+* Progress bar der viser download estimeret tid
+* Mulighed for at hente fra sekundære kolonner, hvis primære kolonner har ugyldige URL
+* Potentiel GUI projekt
+* Logføring til validering af downloads og evt. fejlbeskeder (404, 403, nan, etc)
+* Mulighed for at bruger kan vælge navngivning på PDF-filerne (f.eks. "pdf_01", "file_pdf_05", etc)
+
+
