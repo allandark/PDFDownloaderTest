@@ -19,10 +19,15 @@ Returns:
 
 # Imports
 import argparse
-from excel_reader import ExcelReader
-from pdf_downloader import PdfDownloader
-from file_saver import FileSaver
-from logger import LoggerService
+# from excel_reader import ExcelReader
+from PDFDownloader.excel_reader import ExcelReader
+# from pdf_downloader import PdfDownloader
+from PDFDownloader.pdf_downloader import PdfDownloader
+# from file_saver import FileSaver
+from PDFDownloader.file_saver import FileSaver
+# from logger import LoggerService
+from PDFDownloader.logger import LoggerService
+
 
 class MainController:
 
