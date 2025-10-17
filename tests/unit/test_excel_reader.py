@@ -20,7 +20,7 @@ def test_read_data_valid_data(tmp_path, mock_data_df, mock_reader):
     mock_data = [("http://example.com", '123')]
     with patch("pandas.read_excel", return_value= mock_data_df):        
         result = mock_reader.read_data(tmp_path, "Pdf_URL", "BRnum")        
-        assert Path(result) == mock_data
+        assert str(result) == str(mock_data)
 
 def test_read_data_invalid_excel_file(tmp_path, mock_data_df, mock_reader):
     with patch("pandas.read_excel", 
