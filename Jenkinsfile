@@ -7,10 +7,6 @@ pipeline {
         }
     }
     
-    // environment {
-    //     PYTHONPATH = "${env.WORKSPACE}/src"
-    // }
-
 
   stages {
     stage('Install Dependencies') {
