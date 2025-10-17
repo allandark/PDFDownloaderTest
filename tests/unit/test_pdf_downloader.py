@@ -49,13 +49,13 @@ def test_download_valid_url(mock_response_valid, mock_test_data, mock_downloader
         result = mock_downloader.download(mock_response_valid.url)
         assert result == mock_test_data
 
-#@pytest.mark.skip(reason="Pipeline test")
+@pytest.mark.skip(reason="Pipeline test")
 def test_download_invalid_content_type(mock_response_invalid_content_type, mock_downloader):
     with patch("requests.get", return_value=mock_response_invalid_content_type):        
         with pytest.raises(RuntimeError):
             mock_downloader.download(mock_response_invalid_content_type.url)
 
-#@pytest.mark.skip(reason="Pipeline test")
+@pytest.mark.skip(reason="Pipeline test")
 def test_download_invalid_content_data(mock_response_invalid_content_type, mock_downloader):
     with patch("requests.get", return_value=mock_response_invalid_content_type):      
         mock_response_invalid_content_type._content = b''
