@@ -8,7 +8,7 @@ pipeline {
     }
     
     environment {
-        PYTHONPATH = 'src'
+        PYTHONPATH = "${env.WORKSPACE}/src"
     }
 
 
