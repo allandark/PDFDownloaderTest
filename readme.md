@@ -67,7 +67,7 @@ Programmet er designet med **separation of concerns**, **SOLID-principper** og *
 
 ## ✅ Tests
 Test miljøet gør brug af Pytest pakken. Dependencies er tilføjet til requirements.txt og følgende kommandoer kræver derfor ikke mere setup.
-Der er oprettet en `Jenkinsfile` to at køre testene automatisk i en pipeline.
+Der er oprettet en `Jenkinsfile` to at køre testene automatisk i en pipeline.  
 **Kør unittests og generer en rapport**
 ```
 pytest tests/unit --junitxml="tests/results/unittest_report.xml"
