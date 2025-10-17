@@ -13,7 +13,8 @@ Returns:
 
 ## Operativ system egenskaber importeres
 import os
-from logger import LoggerService
+# from logger import LoggerService
+from PDFDownloader.logger import LoggerService
 
 class FileSaver:
     ## Definerer initialisering og andre elementer

@@ -14,7 +14,8 @@ Returns:
 
 ## Requests import
 import requests as req
-from logger import LoggerService
+# from logger import LoggerService
+from PDFDownloader.logger import LoggerService
 
 class PdfDownloader:
     ## Initialisering af klassen

@@ -16,7 +16,8 @@ Returns:
 
 # Panel Data import
 import pandas as pd
-from logger import LoggerService
+# from logger import LoggerService
+from PDFDownloader.logger import LoggerService
 
 class ExcelReader:
     # initialisering af klassen
